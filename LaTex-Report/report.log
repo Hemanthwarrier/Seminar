@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.6)  17 NOV 2019 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.6)  17 NOV 2019 18:20
 entering extended mode
 **c:/Users/Asus/Desktop/seminar/LaTex-Report/report.tex
 (c:/Users/Asus/Desktop/seminar/LaTex-Report/report.tex
@@ -472,93 +472,99 @@ File: figure1.png Graphic file (type png)
 <use figure1.png>
 Package pdftex.def Info: figure1.png  used on input line 369.
 (pdftex.def)             Requested size: 284.54092pt x 142.26659pt.
-<figure2.png, id=44, 281.25075pt x 76.48575pt>
+<Table1.png, id=44, 281.25075pt x 76.48575pt>
+File: Table1.png Graphic file (type png)
+<use Table1.png>
+Package pdftex.def Info: Table1.png  used on input line 399.
+(pdftex.def)             Requested size: 281.25005pt x 76.48553pt.
+ [6 <c:/Users/Asus/Desktop/seminar/LaTex-Report/figure1.png>] [7 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Table1.png>]
+<figure2.png, id=54, 501.67426pt x 221.628pt>
 File: figure2.png Graphic file (type png)
 <use figure2.png>
-Package pdftex.def Info: figure2.png  used on input line 399.
-(pdftex.def)             Requested size: 281.25005pt x 76.48553pt.
- [6 <c:/Users/Asus/Desktop/seminar/LaTex-Report/figure1.png>] [7 <c:/Users/Asus/Desktop/seminar/LaTex-Report/figure2.png>] [8] [9]
-<Table2.png, id=60, 450.68375pt x 86.3225pt>
+Package pdftex.def Info: figure2.png  used on input line 475.
+(pdftex.def)             Requested size: 501.67302pt x 221.62746pt.
+
+Overfull \hbox (48.70512pt too wide) in paragraph at lines 475--478
+ [][] 
+ []
+
+[8] [9 <c:/Users/Asus/Desktop/seminar/LaTex-Report/figure2.png>]
+<Table2.png, id=62, 525.162pt x 49.3845pt>
 File: Table2.png Graphic file (type png)
 <use Table2.png>
-Package pdftex.def Info: Table2.png  used on input line 440.
-(pdftex.def)             Requested size: 426.813pt x 85.3594pt.
- [10]
-<Figure3.png, id=65, 466.74374pt x 242.9075pt>
+Package pdftex.def Info: Table2.png  used on input line 513.
+(pdftex.def)             Requested size: 426.79134pt x 40.13383pt.
+<Figure3.png, id=63, 463.7325pt x 286.06876pt>
 File: Figure3.png Graphic file (type png)
 <use Figure3.png>
-Package pdftex.def Info: Figure3.png  used on input line 447.
-(pdftex.def)             Requested size: 455.26204pt x 227.62141pt.
+Package pdftex.def Info: Figure3.png  used on input line 531.
+(pdftex.def)             Requested size: 455.25432pt x 227.62436pt.
 
-Overfull \hbox (2.29414pt too wide) in paragraph at lines 447--450
+Overfull \hbox (2.28642pt too wide) in paragraph at lines 531--534
  [][] 
  []
 
-[11 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Table2.png> <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure3.png>]
-<Table3.png, id=71, 453.695pt x 204.765pt>
-File: Table3.png Graphic file (type png)
-<use Table3.png>
-Package pdftex.def Info: Table3.png  used on input line 464.
-(pdftex.def)             Requested size: 455.2446pt x 199.18106pt.
-
-Overfull \hbox (2.2767pt too wide) in paragraph at lines 464--467
- [][] 
- []
-
-[12] [13 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Table3.png>]
-<Figure4.png, id=80, 487.8225pt x 226.8475pt>
+[10 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Table2.png>] [11 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure3.png>]
+<Figure4.png, id=72, 251.13824pt x 263.18324pt>
 File: Figure4.png Graphic file (type png)
 <use Figure4.png>
-Package pdftex.def Info: Figure4.png  used on input line 478.
-(pdftex.def)             Requested size: 455.24826pt x 213.39589pt.
+Package pdftex.def Info: Figure4.png  used on input line 569.
+(pdftex.def)             Requested size: 251.13763pt x 263.1826pt.
 
-Overfull \hbox (2.28036pt too wide) in paragraph at lines 478--481
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 557--573
+
  []
 
-<Figure5.png, id=81, 449.68pt x 257.96375pt>
+[12 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure4.png>]
+<Figure5.png, id=77, 247.52475pt x 261.97874pt>
 File: Figure5.png Graphic file (type png)
 <use Figure5.png>
-Package pdftex.def Info: Figure5.png  used on input line 486.
-(pdftex.def)             Requested size: 455.26419pt x 213.40132pt.
+Package pdftex.def Info: Figure5.png  used on input line 588.
+(pdftex.def)             Requested size: 247.52414pt x 261.9781pt.
+ [13 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure5.png>]
+<Figure6.png, id=83, 245.11575pt x 254.75175pt>
+File: Figure6.png Graphic file (type png)
+<use Figure6.png>
+Package pdftex.def Info: Figure6.png  used on input line 605.
+(pdftex.def)             Requested size: 245.11514pt x 254.75111pt.
+ [14 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure6.png>]
+<Figure7.png, id=88, 504.08325pt x 235.47975pt>
+File: Figure7.png Graphic file (type png)
+<use Figure7.png>
+Package pdftex.def Info: Figure7.png  used on input line 624.
+(pdftex.def)             Requested size: 504.08202pt x 235.47917pt.
 
-Overfull \hbox (2.2963pt too wide) in paragraph at lines 486--489
+Overfull \hbox (51.11412pt too wide) in paragraph at lines 624--627
  [][] 
  []
 
-[14 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure4.png> <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure5.png>] [15]
-<Table4.png, id=90, 442.65375pt x 168.63pt>
-File: Table4.png Graphic file (type png)
-<use Table4.png>
-Package pdftex.def Info: Table4.png  used on input line 503.
-(pdftex.def)             Requested size: 438.19478pt x 167.87308pt.
- [16 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Table4.png>] [17] [18]
-Underfull \hbox (badness 2772) in paragraph at lines 533--534
+[15 <c:/Users/Asus/Desktop/seminar/LaTex-Report/Figure7.png>] [16]
+Underfull \hbox (badness 2772) in paragraph at lines 656--657
 []\OT1/ptm/m/n/12 A.PavlenkoandV.Driagina,``RussianemotionvocabularyinAmerican learn-ers' nar-ra-tives,''
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 536--537
+Underfull \hbox (badness 1406) in paragraph at lines 659--660
 []\OT1/ptm/m/n/12 B.Pang,L.Lee,andS.Vaithyanathan,``Thumbsup?:Sentiment clas-si-fi-ca-tion us-ing ma-chine
  []
 
-[19] [20] (c:/Users\Asus\Desktop\seminar\LaTex-Report\report.aux)
+[17] [18] (c:/Users\Asus\Desktop\seminar\LaTex-Report\report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5030 strings out of 492452
- 77731 string characters out of 3120531
+ 5032 strings out of 492452
+ 77812 string characters out of 3120531
  151796 words of memory out of 3000000
- 9286 multiletter control sequences out of 15000+200000
- 23020 words of font info for 50 fonts, out of 3000000 for 9000
+ 9292 multiletter control sequences out of 15000+200000
+ 21497 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,10n,45p,1535b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:/Users\Asus\Desktop\seminar\LaTex-Report\report.pdf (26 pages, 677594 bytes).
+ 46i,10n,45p,868b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on c:/Users\Asus\Desktop\seminar\LaTex-Report\report.pdf (24 pages, 1325780 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -396,126 +396,249 @@ server. The functionality of each server developed and utilized
 will be explained in the software architecture section.
 
 \begin{figure}[H]
+\includegraphics{Table1.png}
+%\counterwithin{figure}{section}
+\centering
+\caption{\textbf{Table 1.} Micro-Controller Specifications}
+\end{figure}
+
+\subsection{Software Architecture}
+Software architecture consists of three primary building
+modules; data acquisition module on the edge device,
+middleware module, and client application module:
+\subsubsection{Data Acquisition Module}
+The data acquisition module has two functions namely,
+monitoring function and controlling function. The monitoring
+function continuously reads the ambient temperature, humidity
+and the AC power consumption transmits the readings to the
+middleware module through MQTT protocol. These
+parameters are framed and reported to the middleware
+periodically in standard MQTT format. For example, the data
+frame has the user ID, house ID, device ID and the sensor values. The control function is used to receive the commands
+from the middleware module to turn ON/OFF the AC-Units
+accordingly.
+\subsubsection{Middleware Module}
+Middleware module consists of several software tools and
+servers that provide different services as explained below:
+\begin{itemize}
+    \item MQTT Server
+    \newline
+    MQTT server (Broker) [11], provides a medium for the
+    communication between the edge device (home
+    appliances such as AC-Unit) and the middleware.
+    \item Storage Server\newline
+    A highly scalable storage server is used as data
+    warehouse for storing the edge devices’ sensor data and
+    user information. A highly scalable storage server is used as data
+    warehouse for storing the edge devices’ sensor data and
+    user information[23]
+    \item Analytics Engine server \newline
+    An off-the-shelf business intelligence software tool was
+    utilized to make smart decisions from the received big
+    data [2]. For example: the measured data is sorted and
+    classified based on temperature, humidity and power
+    consumption per house. This classification is used to
+    generate reports, graphs, and charts that identify the
+    consumption pattern of the houses in a residential area.
+    This enables every house owner to see his/her own power
+    consumption pattern based on the ambient conditions.
+    Accordingly, home owner can turn ON/OFF the device
+    based on such information if needed.
+    \item Webserver \newline
+      The client application accesses the operational database
+    through different web services. These services are used to transmit data
+    to and from the database and send it back to the
+    requester. Web services are used by the client application
+    to authenticate monitor and control devices, view
+    registered properties, and view registered devices,
+    monthly bill viewing/paying and viewing graphs
+    appropriate to the level of the user.
+    
+\end{itemize}
+\subsubsection{Client Application Module}
+A cross-platform IDE was used to develop the front end
+mobile user interface. The application uses two types of
+authentication; the regular username-password combination is
+used to initiate connection. Once the user is authenticated a
+random generated string called API key is used to authenticate
+operations. This key can be changed anytime, API key
+changes per session. Once the user logs out, the API key is
+changed. Moreover, to make granting privilege like making a
+user a state-owner requires an additional parameter called
+secret key is used. This key changes daily, weekly or monthly
+and is only to be known by the top-level employees. Fig. 2
+displays the overall sequence diagram showing the two-way
+data flow from home devices to end user application; one way
+is for monitoring device consumption details and other is for
+remote access control by the end user.
+\begin{figure}[H]
 \includegraphics{figure2.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Table 1.} MICRO-CONTROLLER SPECIFICATION}
+\caption{\textbf{Figure 2.} Sequence Diagram}
 \end{figure}
-
-\subsection{Research Materials}
-\paragraph{}
-A writing task and a survey questionnaire were developed to evaluate whether learners benefitted from the proposed system. The purpose of this study is to investigate learners’ general performance in emotion word use. Thus, Ekman’s six emotion categories was adopted, the most used characterization in many previous studies, while designing the writing task. For each category, we designed three individual scenarios, which were determined based on the results of a pilot study. The scenarios, described in the participants’ first language to avoid misunderstandings, were to illustrate the emotion category instead of suggesting a specific emotion word. Table 1 exemplifies scenarios for anger and disgust. The participants were allowed to decide their own events relevant to the given scenarios. Also, they were to express a consistent emotion through the whole writing in at least 120 words and use a specific emotion word to describe their feelings. 
-\paragraph{}
-In addition, a seven-item reflection questionnaire was developed to elicit participant opinions on RESOLVE. The first two questions sought information on participant writing behaviour and demands for tool support. The next four questions explored participant views on the system’s experiences in terms of system usability, the quality and number of suggested emotion synonyms, and usage information. The last question elicited participant perceptions on context-aware emotion vocabulary learning. All the questions used the five-point Likert agreement scale ranging from 1 (strongly disagree) to 5 (strongly agree). 
-
-\subsection{Data Collection Procedure}
-A pilot test was conducted three months before the experiment to identify the feasibility and effectiveness of the operational procedure. A group of 19 EFL college students enrolled in an English writing course participated in a five-week experiment involving the RESOLVE system. We thereafter revised the experimental design based on these preliminary results. The study was conducted outside of class time and lasted for five weeks: 
-\paragraph{}
-\textbf{Pre-test:} At the beginning of the study, the participants took an English proficiency test. Afterwards, they were evenly divided into six groups according to their proficiency test scores. Then the six categories were randomly assigned to the six groups. All the participants completed a writing task based on the second scenario of the assigned emotion categories. 
-\paragraph{}
-\textbf{Treatment:} During the three-week treatment phase, each participant was required to complete a total of nine writings for three scenarios of the assigned emotion category on the RESOLVE system. Precisely, three writings for one assigned scenario had to be completed per week. The participants were allowed to decide the events relevant to the given scenarios. After reviewing the synonymous emotion words and the corresponding usage information, the learner could either select one of the suggested emotion words or keep his original one to describe his feeling. Note that in order to maintain the quality of learning, the interval between any two writings from the same participant was at least 24 hours. 
-\paragraph{}
-\textbf{Post-test:} In the post-test, all the participants were to complete another writing task on the second scenario of their assigned emotion categories. They also filled in the survey questionnaire. 
-\paragraph{}
-Several issues are worth noting. First, the second scenario was determined to avoid the effect of short-term memory mainly because the writing task of scenario two was per- formed in the third week, which was not too close to either the pre-test week or the post-test week. Second, the events they described in the pre- and post-tests were identical. The purpose was to compare the appropriateness of the emotion words the participants produced. Third, the participants were unable to refer back to their previous writings, which discouraged them from copying the previous writings. Note that on both the pre- and post-tests, the participants completed their writings using the RESOLVE interface but with the suggestion of synonymous emotion words withheld. 
-\subsection{Design of Scoring Criteria}
-To evaluate the appropriateness of learners’ emotion word use, a 7-point grading scale ranging from 0 (the least appropriate) to 6 (the most appropriate) was used. Two native- speaker judges, trained before the pilot study, were given the participants’ pre-and post-writings as well as the lists of synonyms of the target emotion words they produced, which were extracted from the corpus. The judges gave scores to each emotion synonym on the lists based on the participants’ contexts. Note that the judges had no information about the target emotion words participants produced in both the pre-and post-writings, which avoided scoring bias. Participants’ word choice rather than grammatical accuracy was the focus in the evaluation. If two or more words were considered equally appropriate, they were given equal scores. A weighted Cohen’s Kappa value of 0.68 indicated substantial agreement between the judges. 
 
 \newpage
-\section{RESULTS AND DISCUSSION}
-The current study investigates whether and to what extent RESOLVE helped language learners with emotion word use. We examined learner emotion word use in the pre- and post-writings as well as analysed their reflections of RESOLVE experience. To reflect learner performance accurately, the results of the two judges’ evaluations on each issue were reported respectively. 
-\subsection{Tool Effectiveness on Learner Use of Emotion Words}
-The first research question investigated whether learners benefitted from the proposed tool support. To answer this question, we compared learners’ scores of their emotion word use in the pre-and post-writings. Besides the gain scores, we also reported learners’ error reduction ratios (ERR) in order to avoid analytical bias. 
-
-\begin{equation}
-    ERR = \dfrac{Post-Pre}{Max-Pre}
-\end{equation}
-
+\section{IMPLEMENTATION}
+To validate the architecture of the proposed system, a
+prototype was designed, built and tested in the lab. The
+prototype architecture consists of various hardware and
+software modules. In this section the hardware and software
+components used in the system prototype are described in
+details as follows:
+\subsection{Hardware}
 \paragraph{}
-The error reduction ratio (ERR) quantifies the learner’s error reduction from the pre-test to the full mark, which is shown in above equation. where Max is the full mark (six in our scoring scheme), Post and Pre are the scores of post- and pre-tests, respectively. This can be interpreted as a measure of the room for improvement. Note that errors in this study indicate inappropriate emotion word use. Taking this study as an example, two learners both improved their scores by 1 point (out of 6): one learner’s score increased from 4 to 5; the other from 5 to 6. Their improvements were 20.0% ((5−4)/5) and 16.7% ((6−5)/6) respectively. At first sight, the learner who scored higher at first did not make as significant progress as the lower-scoring learner. Indeed, to a certain extent, it can be hard for learners with better initial performance to make considerable improvements. However, the ERR shows different results. The improvement of the initially lower-scoring learner is 50.0% ((5−4)/(6−4)) while that of the initially higher-scoring learner is 100.0% ((6−5)/(6−5)). Because ERR provides us with an alternative view on learners’ improvement, we included ERR to examine participants’ performances. The two judges’ scorings were reported individually, which helped us learn the different views they held on learners’ emotion word use. 
-\paragraph{}
-We first compared learners’ average scores in the pre- and post-tests. The first row of Table 2 shows that all learners achieved expected gains. ANOVA results revealed that there was a significant difference between learner performance on the pre-test and post-tests (Judge 1: F(1,64)= 9.67, p value=0.003 and Judge 2: F (1,64)= 9.92, p value=0.002). This indicates that the participants made improvement on emotion word use after the three-week treatment. 
+The hardware consists of a sensor array, high-end
+microcontroller, and relay banks. The sensor array comprises
+of RFID reader, temperature, humidity and current sensors.These sensors collect the device status and report it to the
+microcontroller periodically. The RFID module consists of
+RFID tag and a reader for each home device which is used for
+the local control of the device by swiping the tag through the
+reader by the home owner [26]. As mentioned in the previous
+section, the microcontroller [21] is a high end single SoC on
+the edge that collects the information from the sensors and
+forwards it to the servers for further processing via MQTT
+broker. Since the microcontroller cannot provide enough
+power, a solid state relays bank was used to provide a power
+driving circuit for the appliances. For the implementation in
+lab, 220 volts AC fans are used to mimic HVAC units.
+Depending on the different business processes, the
+microcontroller can be programmed to function differently for
+each scenario. For consumption analysis, the microcontroller
+is programmed to collect the temperature, humidity and power
+consumption data from the sensors.
+
 
 \begin{figure}[H]
-\includegraphics[height=3cm,width=15cm]{Table2.png}
+\includegraphics[width=15cm]{Table2.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Table 2.} Participant performance on pre-and post-tests}
+\caption{\textbf{Table 2.} Data Frame-Payload}
 \end{figure}
 
+\paragraph{}
+The data is framed in to a lightweight format compatible with MQTT server. This
+framed data is attached with the user, house and device details
+as shown in Table 2. To implement remote controlling of
+devices through client application, the microcontroller reports
+the status of the device whenever the state of device is
+changed. To enable the billing utility process, the
+microcontroller transmits the total power consumption of the
+device every day to the servers via the MQTT protocol. Fig. 3
+shows the prototype that was built in the lab to mimic the
+proposed system.
 \begin{figure}[H]
 \includegraphics[height=8cm,width=16cm]{Figure3.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Figure 3.} Learning effectiveness of students with different proficiency levels}
+\caption{\textbf{Figure 3.} Hardware Components}
 \end{figure}
 
+\subsection{Software}
 \paragraph{}
-Next, we investigated whether RESOLVE was of great benefit to different learners (Table 2, second panel). To do so, the participants were divided into two groups based on their scores of the proficiency test, which was conducted in the first week. A total of 15 participants scored above or equal to the grand average (67.45), so they were classified as highly proficient. The other 18 participants with below-average scores were classified as less proficient. The average scores of the highly and less proficient groups were 80.93 and 56.22 out of 100.00 respectively. The learning effectiveness of the highly and less proficient students is visualized in Figure 3. Both figures showed that after the treatment, less proficient students made more noticeable improvement as compared with the highly proficient students. In fact, less proficient students achieved almost the same or even higher levels of performance in the emotion wording task than their counterparts. 
-\paragraph{}
-The significance of the improvements of both groups was further quantified by ANOVA: the first judge’s evaluation showed a significant difference between both the highly and less proficient learners (F(1, 31)=9.76, p value=0.004), whereas according to the second judge, no significant difference existed between the two groups (F(1, 31)=.71, p value=0.405). To understand whether less proficient learners benefited from the tool support, or highly proficient learners’ higher scores in the pre-test limited their potential for improvements, we calculated learner error reductions. Clearly, the ERRs of the less proficient learners were higher than those of the highly proficient learners based on both judges’ evaluations. It indicates that the less proficient learners made significant progress even after the error residual was normalized despite insignificant difference between the two groups in the second judge’s view. Since the results revealed that the less proficient learners showed greater improvements, we further sought to investigate how the performance of these two groups differed, which is discussed in the next section. 
-\subsection{Performance Comparison of Learners}
-\paragraph{}
-The second research question attempted to explore how the improvements of highly and less proficient learners differed. A second order polynomial curve was used to fit these (proficiency level, improved score) data points: the trend is shown in Figure 4. From the first judge’s evaluation (left subfigure), a negative relationship can be seen between the learners’ language proficiency and their improved scores. In other words, the lower the proficiency level, the more improvement achieved by the participant. The second judge’s view, however, was somewhat different. The right figure reveals a downward trend for highly proficient learners and a slightly upward trend for less proficient learners. This means that for the highly proficient group, the higher the proficiency level, the smaller the gain; however, the less proficient learners did not follow this pattern. 
-\paragraph{}
-Taken together, the judges shared similar opinions with respect to the performance of the highly proficient learners whereas there were discrepancies for the less proficient learners. To investigate these differences, we scrutinized the individual performances of the less proficient participants. Discrepancies were found in four less proficient participants, so the data of these four participants were particularly examined. Table 3 shows the breakdown of the participants’ emotion words and their scores in the pre- and post-tests. 
+The software implementation involves benchmarking and
+data analysis techniques using Business Intelligence tool to
+generate graphs, charts and reports in real time. This was
+followed with the development of a mobile application to
+render the generated graphs, charts, and reports to end users. A
+description of these software modules is given as follows:
 
-\begin{figure}[H]
-\includegraphics[height=7cm,width=16cm]{Table3.png}
-%\counterwithin{figure}{section}
-\centering
-\caption{\textbf{Table 3.} Breakdown of four participants’ emotion word use and scores before and after treatment}
-\end{figure}
+\begin{itemize}
+    \item \textbf{Benchmarking and data analysis using BI platform}
+    \newline
+    One of the primary analysis techniques in data mining is
+    benchmarking. Benchmarking the data sets can help identify which houses or residential areas should be focused on for
+    setting optimal energy management goals and policies. The
+    business intelligence software tool serves as an optimum
+    platform for benchmarking real time data and generating userinteractive
+    charts and reports. Different benchmarking
+    scenarios are deemed for the four stakeholder levels as
+    mentioned in the previous section. 
+    \newpage For the stakeholder
+    like a home owner in a residential area, they are entitled to view the
+    graphs and charts for the total power consumption of his/her
+    house on a daily, monthly, and annual basis. The user is
+    prompted to enter his/her house ID and select the year for
+    which he/she desires to view the power consumption of each
+    device in the house as shown in Fig. 4. The home owners can
+    use benchmarking service to compare their power
+    consumption with other housing units that have a similar
+    setup.
+    \newline
+    \begin{figure}[H]
+    \includegraphics{Figure4.png}
+    %\counterwithin{figure}{section}
+    \centering
+    \caption{\textbf{Figure 4.} Home Owner Graph}
+    \end{figure}
+    \newpage
+    For community stakeholders, they are entitled to
+    monitor power consumption of all houses in their respective
+    community. There are two types of settings involved; first,
+    benchmarking annual power consumption of each house
+    against per square feet power consumption. Second,
+    categorizing each house depending on its annual power
+    consumption with respect to the house-age. The community
+    owner is prompted to enter his/her respective community ID in
+    order to obtain the desired graph or chart. A screenshot of
+    annual power consumption chart for several housing units
+    with their respective house IDs in a community is shown in
+    Fig. 5.
+        \begin{figure}[H]
+        \includegraphics{Figure5.png}
+        %\counterwithin{figure}{section}
+        \centering
+        \caption{\textbf{Figure 5.} Community Owner Graph}
+        \end{figure}
+        \newpage
+    The state stakeholders at a state utility center can view data set distribution across
+    regional communities within the state. Also, they can view the
+    average power consumption spread across different
+    communities on a monthly and yearly basis. The graphical
+    data will be used to create benchmarks based on past records
+    for conducting root cause analysis which is one of the business
+    processes as mentioned previously. The trend line graphs can
+    help predict the nature of power consumption of the state with
+    respect to weather conditions (temperature) in future as shown
+    in Fig.6.
+        \begin{figure}[H]
+        \includegraphics{Figure6.png}
+        %\counterwithin{figure}{section}
+        \centering
+        \caption{\textbf{Figure 6.} State Owner Graph}
+        \end{figure}
+        \newpage
+\item \textbf{Client Application}
+        \newline
+    A cross-platform application is developed that gives access
+    to every stakeholder a different view to the data analytics
+    according to his/her privileges. Once a user logs in, a service
+    will run to get the user privileges and the user interface
+    components that he/she will be able to see consequently.
+    \newline For example, for the home owner, there are two services available:
+    \newline First is monitoring power consumption data of each house device as shown in Fig. 6 and second is remote control
+    services (ON/OFF) for house devices as shown in Fig. 7(a).
+    For the bill tracking service, the user can view the monthly bill
+    and pay the due amount online as shown in Fig. 7(b).
+        \begin{figure}[H]
+        \includegraphics{Figure7.png}
+        %\counterwithin{figure}{section}
+        \centering
+        \caption{\textbf{Figure 7.} (a) Remote control of devices      (b) Monthly Bill Management}
+        \end{figure}
+\end{itemize}
 
-\paragraph{}
-Specifically, from the perspective of Judge 1, these four participants showed improvements whereas from Judge 2’s view, no one made progress except Participant 1. Although both judges agreed on Participant 1’s improvement, they were not consistent about the appropriateness of his emotion word use. We then take a further look at the performance of the other three participants from the evaluation of Judge 2. Participant 2 and Participant 4 received full marks in the pre- and post-tests, leaving no room for improvement. Turning to Participant 3, the zero point in both pre- and post-tests showed that his emotion words were the least appropriate. For this reason, the views of both judges differed greatly. Researchers such as Dewaele and Pavlenko suggest that the use of emotion words is related to individual experience; this could explain the judges’ divergent views. 
-\paragraph{}
-If we exclude the markedly different data, a similar trend can be seen in the judge evaluations as that seen in Figure 5. That is, for the less proficient group, the lower the proficiency level, the greater the improvement. In contrast, for highly proficient participants, the higher the proficiency level, the smaller their gains. This could be because they had confidence in their command of emotion words, as evidenced by the fact that seven out of 15 participants used the same emotion words in their pre- and post-writings, which scored full marks. On the other hand, 16 out of 18 participants used different emotion words in their writings. Their improved scores showed that their attempts were successful. 
-\paragraph{}
-It is worth noting that for the participants whose English proficiency was extremely high or extremely low, the bene- fit of RESOLVE was less obvious. It is not surprising that advanced learners had sufficient competence to make appropriate lexical choices. On the other hand, the low-achieving learners’ limited vocabulary was likely to make emotion word learning much more demanding. Overall, less proficient learners significantly benefitted from the proposed system, RESOLVE, in emotion word learning compared with the highly proficient learners, which was expected. 
-
-\begin{figure}[H]
-\includegraphics[height=7.5cm,width=16cm]{Figure4.png}
-%\counterwithin{figure}{section}
-\centering
-\caption{\textbf{Figure 4.} Relationship between learner language proficiency and extent of improvement}
-\end{figure}
-
-
-\begin{figure}[H]
-\includegraphics[height=7.5cm,width=16cm]{Figure5.png}
-%\counterwithin{figure}{section}
-\centering
-\caption{\textbf{Figure 5.} Relationship between learner language proficiency and extent of improvement excluding the four outliers}
-\end{figure}
-
-\subsection{Learners’ Perceptions of Context-Based Emotion Synonym Learning}
-\paragraph{}
-To answer this research question, a seven-item reflection questionnaire was designed to elicit participant perceptions on RESOLVE in terms of learner needs, system usefulness, and its contribution to language learning. Moreover, participants’ open-ended responses were collected to elicit the rea- sons underlying their answers to each closed-form question. To have a greater understanding of the opinions of different students, the feedback of learners with different proficiency levels was analysed (Table 4). A two-sample t test was carried out, and the results showed no significant difference between the two groups’ responses. Learners’ perceptions on each survey question were discussed below. 
-\paragraph{}
-The first panel illustrates the participant learning back- grounds: their writing behaviour (item 1) and their needs for tool support (item 2). The scores of these two items were quite high (all above 3.80/5.00). Both groups reported that they intended to restate their feelings. To have a better under- standing of the behaviour of the two groups, we scrutinized the emotion words produced by the participants and found that eight highly and 16 less proficient participants used different emotion words in their pre- and post-writings. It is likely that highly proficient participants had greater confidence in their emotion word use than the less proficient ones. Meanwhile, participants’ strong demand for tool support indicated that learners needed help to be engaged in emotion word learning. 
-\paragraph{}
-The second panel shows participant perceptions on system usefulness, including system function (item 3) and suggested information (item 4-6). First, the tool usability scored quite high. In particular, both groups were satisfied with being able to consult synonyms and usage information directly without switching visual focus between webpages while composing their writing. The results supported previous research on the split-attention effect: Learning in an integrated environment reduces mental effort and improves learning results. Participants’ feedback showed that our design met their needs. Second, the information provided by RESOLVE included the ranked emotion words (item 4), the number of synonymous emotion words (item 5), and the usage information (item 6). Both groups appreciated the suggested emotion words as well as the usage information. Less proficient learners particularly acknowledged that the usage information (i.e., scenario descriptions, definitions and example sentences), benefit them in learning to use emotion synonyms appropriate to their contexts. Interestingly, both groups did not seem to share similar views on the number of suggested synonyms, even though there was no significant difference between them. Less proficient learners appreciated five suggestions whereas highly proficient participants expected more suggestions. Some participants suggested that eight synonyms would yield adequate choices for better wording. 
-\paragraph{}
-The last question (item 7) sought participant reflections on the role of RESOLVE for language proficiency. Nearly 80\% of the learners (26 out of 33 participants) saw RESOLVE as a practical reference aid that benefited their writing and promoted language competence. A significantly higher number of less proficient learners (n=16) acknowledged the tool assistance. The opinions of the less proficient participants echoed the findings of the previous research questions that they received greater benefit from the tool support than their counterparts. 
-
-\begin{figure}[H]
-\includegraphics[height=5.9cm,width=15.4cm]{Table4.png}
-%\counterwithin{figure}{section}
-\centering
-\caption{\textbf{Table 4.} Survey results of participant perceptions on RESOLVE}
-\end{figure}
-
-\newpage
-\section{LIMITATIONS AND FUTURE WORK}
-To the best of our knowledge, this is the first study considering the application of sentiment analysis to assisting language learning. It is worth mentioning that although the focus of the current study is emotion vocabulary learning, the RESOLVE system can be easily adapted for other vocabulary or synonym learning. While the preliminary findings supported that the developed system was beneficial to emotion word use, there are limitations in this study that could be improved. For example, a greater number of participants should be involved, which could help us take a closer look at potential learner difficulties in the use of emotion words. Also, tool comparison (e.g., online thesauri) could be conducted to examine their individual impacts on learners. 
 
 \newpage
 \section{CONCLUSION}
 \paragraph{}
-Emotion vocabulary has been an important concern in several disciplines. They were especially widely used in sentiment detection or prediction. However, it has not received particular attention in foreign language teaching and learning. In view of the paucity of research, we developed RESOLVE, a context-based emotion synonym suggestion system. Developed using machine learning techniques, RESOLVE is capable of suggesting contextually appropriate emotion synonyms. The usage information is also provided to reinforce learner’s word use. The tool effective- ness was assessed using a writing task and a reflection questionnaire. The results demonstrated that both the suggested emotion synonyms and the corresponding usage information are beneficial to learners’ use of emotion vocabulary. Notably, less proficient participants showed greater improvements.
-\paragraph{}
-Mastering emotion words is a challenging task for language learners, so emotion vocabulary should be explicitly taught and consciously learned. The RESOLVE system is applicable for use in classroom teaching and activities. The approach proposed in this study could be replicated in the classroom. Instructors could create various scenarios for specific emotion categories and have their students compose writings via consulting RESOLVE. Afterwards, instructors elaborate on how the words students produce could be used in various scenarios. Such pedagogical activities enable learners to develop a clearer understanding of as well as stronger command of emotion word use. 
+The proposed work is set to open new avenues for smart
+energy management on IoT and Big Data platform. The
+system design uses data analytics and scalable storage for
+building a smart EMS to aid different stakeholders with their
+respective privileges. The system empowers users to remotely
+monitor and control devices, and online bill generation via a
+friendly user interface mobile application
 
 \newpage
 % \cleardoublepage
