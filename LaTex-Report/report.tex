@@ -144,13 +144,12 @@ their support and assistance.
 Increasing cost and demand of energy has led many
 organizations to find smart ways for monitoring, controlling and
 saving energy. A smart Energy Management System (EMS) can
-contribute towards cutting the costs while still meeting energy
+contribute towards cutting the costs while still meeting the energy
 demand. The emerging technologies of Internet of Things (IoT)
 and Big Data can be utilized to better manage energy
 consumption in residential, commercial, and industrial sectors.
 \paragraph{}
-This report presents an Energy Management System (EMS) for
-smart homes. In this system, each home device is interfaced with
+An Energy Management System (EMS) for smart homes is considered in this work. In this, each home device is interfaced with
 a data acquisition module that is an IoT object with a unique IP
 address resulting in a large mesh wireless network of devices.
 The data acquisition System on Chip (SoC) module collects
@@ -208,8 +207,8 @@ and control the household appliances energy consumption on a
 large scale. This data is collected using many different
 wireless sensors installed in residential units. Similarly, Big
 Data technology can be utilized to collect and analyze large
-amounts of data [1]. Data analytics on this data using business
-intelligence (BI) platform [2] plays an essential role in energy
+amounts of data[2]. Data analytics on this data using business
+intelligence (BI)[3] platform plays an essential role in energy
 management decisions for homeowners and the utility alike.
 The data can be monitored, collected and analyzed using
 predictive analysis and advanced methods to actionable
@@ -224,6 +223,36 @@ being aware of their consumption behavior and having a close
 interaction with the electricity utilities, can adjust and
 optimize their power consumption and reduce their electricity
 bills.
+\paragraph{}
+The literature review indicates that various communication
+protocols in a WSN have been utilized in EMS for smart
+homes. However, for a seamless integration of all residential
+devices, an open-source light weight communication protocol
+is required. This will foster interoperability leading to scalable
+systems. Installation of home EMS can help home owners to
+understand contribution of each device towards the overall
+electricity bill they receive. In addition, most previous work
+has primarily focused on individual smart homes and lack the
+energy management provisions for regional utility providers or
+national level utility centers. The technology to collect huge
+volumes of data from home sensor networks is available,
+however, managing the collected data efficiently and
+extracting deeper insights from it remains a challenge. The
+existing paradigms on EMS and cost saving models are
+implemented on discrete units while the proposed model can
+be built on top of the existing architectures to cater to a
+distributed EMS platform from consumer to community level
+stakeholders.
+\paragraph{}
+The design and implementation of an EMS that addresses these shortcomings is
+introduced and the proposed system utilizes an IoT based communication protocol
+based on well-established standards like MQTT which makes the system scalable. In addition to this, the proposed system is
+empowered with analytics and Business Intelligence (BI) that
+provides a meaningful perspective on the collected data through
+dashboard visualization and reporting. Moreover, using Big
+Data based data storage technology ensures the system
+scalability on a national level, thus catering energy management
+services to both home owners as well as utility providers.
 \paragraph{}
 Finally, as
 an additional advantage, the use of IoT also enables seamless
@@ -243,14 +272,14 @@ conclusion.
 \section{RELATED WORK}
 \subsection{Home Energy Management System (HEMS) using a ZigBee Module}
 \paragraph{}
-In [3, 4, 5], an
+In [4,5,6], an
 implementation of a HEMS Unit in a Wireless Sensor
 Network using a ZigBee Module to communicate with sensor
 nodes, is presented. The system monitors the device
 consumption data and sends control signals to end nodes
 during peak load hours. However, the lifetime of a WSN
 network deteriorates with time due to the deployment of new
-sensors in the network. Additionally, Han et al. in [6]
+sensors in the network. Additionally, Han et al. in [7]
 introduced a system for monitoring power consumption using
 ZigBee as the communication protocol in a WSN. However,
 in this system the data was collected and aggregated solely by
@@ -260,12 +289,12 @@ TCP/IP stack would be required to connect this system to a
 community of homes.
 
 \subsection{Extending the Previous Work}
-In [7, 8], the above mentioned WSN networks have been extended
+In [8,9], the above mentioned WSN networks have been extended
 to wider ranges in the IoT paradigm utilizing the GSM/GPRS
 networks to remotely control the end-devices.
 
 \subsection{An Integrated Cloud-based Smart Home Management System}
-In this paper [12], a hierarchical, smart-home service architecture employed with
+In[13], a hierarchical, smart-home service architecture employed with
 multiple in-home displays for user interfaces is described by them.
 In this research, a home controller system interfaced
 with device sensors is responsible for aggregated energy
@@ -276,7 +305,7 @@ within a community. Furthermore, a comparative analysis
 between Message Queuing Telemetry Transport Protocol
 (MQTT) and Hypertext Transfer Protocol (HTTP) is also
 performed to determine which protocol was more efficient in
-providing home control services [12]. The design of the
+providing home control services [13]. The design of the
 proposed architecture, however, lacks the incorporation of Big
 Data which is instrumental in processing and analyzing huge
 volume of data collected from several home sensor networks.
@@ -285,7 +314,7 @@ volume of data collected from several home sensor networks.
 \subsection{Developments of the in-home Display Systems for Residential Energy Monitoring}
 Multiple in-home display systems (IHDs) and automatic
 meter reading systems (AMR) were discussed in the context of
-providing energy management information in [14]. Depending
+providing energy management information in [15]. Depending
 on the ambient conditions, the smart home systems could
 choose the display devices such as TV, smartphone or tablet
 computers and accordingly select the appropriate user
@@ -295,7 +324,7 @@ the requirement for multiple displays.
 
 \subsection{Home energy management system based on power line communication}
 This architecture of HEMS utilizing power line communication was addressed
-in [15]. Using smart meter data, this HEMS can monitor and provide real-time information on home energy consumption
+in [16]. Using smart meter data, this HEMS can monitor and provide real-time information on home energy consumption
 along with online access to devices status, thus allowing
 remote control of devices by customers. The proposed design
 is based on standard HTTP protocol and does not provide
@@ -377,18 +406,18 @@ system’s hardware and software architecture are as follows:
 As the proposed system is to monitor and control the AC
 units, an integrated temperature and humidity sensor is
 interfaced with the microcontroller to measure the ambient
-conditions. In addition, a solid state relay is controlled by the microcontroller
+conditions.[21] In addition, a solid state relay is controlled by the microcontroller
 to switch ON/OFF the devices accordingly. A
 current sensor is used to measure the AC current to calculate
 the power consumption.
 \subsubsection{High-end Microcontroller}
 A SoC high end microcontroller is used as edge device data
-acquisition module that manages the HVAC unit. The
+acquisition module that manages the HVAC unit.[22] The
 compact sized, high speed and lightweight SoC is suitable for
 residential areas. Table I displays the specifications of the
 micro-controller used in this study.
 \subsubsection{Servers}
-In the proposed architecture, the servers are high-end PCs
+In this architecture, the servers are high-end PCs
 which can also be deployed on Cloud for wide-scale
 accessibility. The installed servers are: MQTT Broker, highly
 scalable Storage Server, Analytics Engine server, and a Web
@@ -399,7 +428,7 @@ will be explained in the software architecture section.
 \includegraphics{Table1.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Table 1.} Micro-Controller Specifications}
+\caption{\textbf{Table I.} Micro-Controller Specifications}
 \end{figure}
 
 \subsection{Software Architecture}
@@ -423,19 +452,18 @@ servers that provide different services as explained below:
 \begin{itemize}
     \item MQTT Server
     \newline
-    MQTT server (Broker) [11], provides a medium for the
+    MQTT server (Broker)[11], provides a medium for the
     communication between the edge device (home
     appliances such as AC-Unit) and the middleware.
     \item Storage Server\newline
     A highly scalable storage server is used as data
     warehouse for storing the edge devices’ sensor data and
-    user information. A highly scalable storage server is used as data
-    warehouse for storing the edge devices’ sensor data and
-    user information[23]
+    user information.Operational database that runs on
+    top of existing scalable storage server was chosen [24].
     \item Analytics Engine server \newline
     An off-the-shelf business intelligence software tool was
     utilized to make smart decisions from the received big
-    data [2]. For example: the measured data is sorted and
+    data.[3] \newline For example: the measured data is sorted and
     classified based on temperature, humidity and power
     consumption per house. This classification is used to
     generate reports, graphs, and charts that identify the
@@ -446,7 +474,8 @@ servers that provide different services as explained below:
     based on such information if needed.
     \item Webserver \newline
       The client application accesses the operational database
-    through different web services. These services are used to transmit data
+    through different web services implemented using
+    JavaScript [24]. These services are used to transmit data
     to and from the database and send it back to the
     requester. Web services are used by the client application
     to authenticate monitor and control devices, view
@@ -457,7 +486,7 @@ servers that provide different services as explained below:
 \end{itemize}
 \subsubsection{Client Application Module}
 A cross-platform IDE was used to develop the front end
-mobile user interface. The application uses two types of
+mobile user interface[26]. The application uses two types of
 authentication; the regular username-password combination is
 used to initiate connection. Once the user is authenticated a
 random generated string called API key is used to authenticate
@@ -494,8 +523,8 @@ of RFID reader, temperature, humidity and current sensors.These sensors collect 
 microcontroller periodically. The RFID module consists of
 RFID tag and a reader for each home device which is used for
 the local control of the device by swiping the tag through the
-reader by the home owner [26]. As mentioned in the previous
-section, the microcontroller [21] is a high end single SoC on
+reader by the home owner.[27] As mentioned in the previous
+section[22], the microcontroller is a high end single SoC on
 the edge that collects the information from the sensors and
 forwards it to the servers for further processing via MQTT
 broker. Since the microcontroller cannot provide enough
@@ -513,13 +542,13 @@ consumption data from the sensors.
 \includegraphics[width=15cm]{Table2.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Table 2.} Data Frame-Payload}
+\caption{\textbf{Table II.} Data Frame-Payload}
 \end{figure}
 
 \paragraph{}
-The data is framed in to a lightweight format compatible with MQTT server. This
+The data is framed in to a lightweight format[28] compatible with MQTT server. This
 framed data is attached with the user, house and device details
-as shown in Table 2. To implement remote controlling of
+as shown in Table II. To implement remote controlling of
 devices through client application, the microcontroller reports
 the status of the device whenever the state of device is
 changed. To enable the billing utility process, the
@@ -554,8 +583,8 @@ description of these software modules is given as follows:
     charts and reports. Different benchmarking
     scenarios are deemed for the four stakeholder levels as
     mentioned in the previous section. 
-    \newpage For the stakeholder
-    like a home owner in a residential area, they are entitled to view the
+    \newpage
+    For the stakeholder like a \textbf{home owner} in a residential area, they are entitled to view the
     graphs and charts for the total power consumption of his/her
     house on a daily, monthly, and annual basis. The user is
     prompted to enter his/her house ID and select the year for
@@ -565,14 +594,14 @@ description of these software modules is given as follows:
     consumption with other housing units that have a similar
     setup.
     \newline
-    \begin{figure}[H]
-    \includegraphics{Figure4.png}
-    %\counterwithin{figure}{section}
-    \centering
-    \caption{\textbf{Figure 4.} Home Owner Graph}
-    \end{figure}
+        \begin{figure}[H]
+        \includegraphics{Figure4.png}
+        %\counterwithin{figure}{section}
+        \centering
+        \caption{\textbf{Figure 4.} Home Owner Graph}
+        \end{figure}
     \newpage
-    For community stakeholders, they are entitled to
+    For \textbf{community stakeholders}, they are entitled to
     monitor power consumption of all houses in their respective
     community. There are two types of settings involved; first,
     benchmarking annual power consumption of each house
@@ -584,14 +613,15 @@ description of these software modules is given as follows:
     annual power consumption chart for several housing units
     with their respective house IDs in a community is shown in
     Fig. 5.
+    \newline
         \begin{figure}[H]
         \includegraphics{Figure5.png}
         %\counterwithin{figure}{section}
         \centering
         \caption{\textbf{Figure 5.} Community Owner Graph}
         \end{figure}
-        \newpage
-    The state stakeholders at a state utility center can view data set distribution across
+    \newpage
+    The \textbf{state stakeholders} at a state utility center can view data set distribution across
     regional communities within the state. Also, they can view the
     average power consumption spread across different
     communities on a monthly and yearly basis. The graphical
@@ -601,16 +631,17 @@ description of these software modules is given as follows:
     help predict the nature of power consumption of the state with
     respect to weather conditions (temperature) in future as shown
     in Fig.6.
+    \newline
         \begin{figure}[H]
         \includegraphics{Figure6.png}
         %\counterwithin{figure}{section}
         \centering
         \caption{\textbf{Figure 6.} State Owner Graph}
         \end{figure}
-        \newpage
+    \newpage
 \item \textbf{Client Application}
         \newline
-    A cross-platform application is developed that gives access
+    A cross-platform application is developed which provides access
     to every stakeholder a different view to the data analytics
     according to his/her privileges. Once a user logs in, a service
     will run to get the user privileges and the user interface
@@ -624,10 +655,98 @@ description of these software modules is given as follows:
         \includegraphics{Figure7.png}
         %\counterwithin{figure}{section}
         \centering
-        \caption{\textbf{Figure 7.} (a) Remote control of devices      (b) Monthly Bill Management}
+        \caption{\textbf{Figure 7.} (a) Remote control of devices \hspace{2ex} (b) Monthly Bill Management}
         \end{figure}
 \end{itemize}
 
+\newpage
+\section{EVALUATION AND TESTING}
+A set of criteria were developed to evaluate system
+performance for scalability, speed and security. Scalability is
+the main concern for the MQTT Server and Web server to
+accommodate all customers on national level. Speed was also
+important for querying to and from the storage server or
+operational database. It’s worth mentioning that the security
+aspect of the proposed system is under development.
+
+\subsection{MQTT Server Scalability}
+\paragraph{}
+A network analysis tool was used to measure the following
+metric: Throughput, Latency, and Packets dropped. For
+an experimental comparison, a logarithmic scale of clients was
+chosen to send 1, 10, 100, and 1000 consecutive messages
+with a reliability of Quality of Service: QoS-0 and QoS-1 in
+each case. QoS-2 was excluded in test cases due to its large
+overhead. Table III represents different test case scenarios
+indicating that the system was able to accept 1000 concurrent
+MQTT clients publishing messages to a subscribed topic of
+the MQTT server. 
+\newline
+    \begin{figure}[H]
+    \includegraphics{Table3.png}
+    %\counterwithin{figure}{section}
+    \centering
+    \caption{\textbf{Table III.} MQTT Test Cases and Results}
+    \end{figure}
+\newpage
+From the results as shown in Table III, it is
+evident that the overall latency for QoS-0 is always lower than
+that for QoS-1 irrespective of the number of concurrent client
+requests. This difference is expected because in
+QoS-0 message delivery is not acknowledged whereas in QoS-
+1 acknowledgment for confirmed message reception is sent,
+which adds to the latency of message transmission in QoS-1.
+Also, the throughput for QoS-1 was observed to be higher than
+that for QoS-0 for any number of clients since QoS-1 offers a
+reliable means of communication due to message
+acknowledgement and persistent session (Fig. 8).
+    \begin{figure}[H]
+    \includegraphics{Figure8.png}
+    %\counterwithin{figure}{section}
+    \centering
+    \caption{\textbf{Figure 8.} Throughput (kbps) Vs. Number of clients’ graph}
+    \end{figure}
+
+\newpage
+\subsection{Scalability for Webserver}
+\paragraph{}
+Many users were simulated concurrently using a Webserver
+Stress Tool. Each user in this test makes a request involving
+operational database. CPU and Network utilization were high
+when all requests started coming as shown in Fig. 9. Almost
+all requests were answered immediately up to 4000 users.
+Beyond 4000 users the communication was terminated due to
+data traffic congestion and testing tool limitation. Memory
+remained about 85% throughout the test. This is due to
+database read and writes activity that runs asynchronously in
+the background.
+    \begin{figure}[H]
+    \includegraphics{Figure9.png}
+    %\counterwithin{figure}{section}
+    \centering
+    \caption{\textbf{Figure 9.} Server performance during request phase}
+    \end{figure}
+
+\newpage
+\subsection{Speed for Storage Server}
+\paragraph{}
+The data server speed was acceptable up to 4000 concurrent
+users. This is again due to the data traffic congestion and
+testing tool limitation. The time lapse for querying up to 4000
+concurrent requests involved storage server operations. Read
+operation was performed by the storage server using web
+services. Moreover, an ETL (Extract-Transform-Load) script
+was written to measure the time taken to read from storage
+server during peak time. 4000 files, each 62 Bytes in size,
+were extracted from the storage server for read operation. A
+summary of the response time to complete read and write
+operation by the storage server is shown in Table IV.
+    \begin{figure}[H]
+    \includegraphics{Table4.png}
+    %\counterwithin{figure}{section}
+    \centering
+    \caption{\textbf{Table IV.} Storage Server Performance}
+    \end{figure}
 
 \newpage
 \section{CONCLUSION}
@@ -648,26 +767,67 @@ friendly user interface mobile application
 \section{REFERENCES}
 \begin{thebibliography}{9}
 
+\bibitem{d}"A.R. Al-Ali, I.A. Zualkernan, M. Rashid, R. Gupta, M. Alikarar, "A smart home energy management system using IoT and big data analytics approach",\emph{IEEE Transactions on Consumer Electronics}, vol. 63, no. 4, pp. 426-434, 2017"
+\bibitem{d}“Design and implementation of building energy monitoring and
+management system based on wireless sensor networks,” \emph{Tenth International Conference on Computer Engineering \& Systems (ICCES)},
+Cairo, 2015, pp. 230-233
+\bibitem{d}N. H. Nguyen, Q. T. Tran, J. M. Leger and T. P. Vuong, “A real-time
+control using wireless sensor network for intelligent energy management
+system in buildings,” \emph{ 2010 IEEE Workshop on Environmental Energy
+and Structural Monitoring Systems, Taranto}, 2010, pp. 87-92.
+\bibitem{d}J. Byun, I. Hong, B. Kang and S. Park, “Implementation of an Adaptive
+Intelligent Home Energy Management System Using a Wireless Ad-Hoc
+and Sensor Network in Pervasive Environments,” \emph{Proceedings of
+20th International Conference on Computer Communications and
+Networks (ICCCN)}, Maui, HI, 2011, pp. 1-6.
+\bibitem{d}J. Han, C. s. Choi, W. k. Park, I. Lee and S. h. Kim, “Smart home energy
+management system including renewable energy based on ZigBee and PLC,”
+\emph{IEEE Trans. Consumer Electron}, vol. 60, no. 2, pp. 198-202, May 2014.
+\bibitem{d}J. Wang, J. Huang, W. Chen, J. Liu and D. Xu, “Design of IoT-based
+energy efficiency management system for building ceramics production
+line,” \emph{ IEEE 11th Conference on Industrial Electronics and
+Applications (ICIEA)}, Hefei, 2016, pp. 912-917
+\bibitem{d}G. Mingming, S. Liangshan, H. Xiaowei and S. Qingwei, “The System
+of Wireless Smart House Based on GSM and ZigBee,” \emph{
+International Conference on Intelligent Computation Technology and
+Automation}, Changsha, 2010, pp. 1017-1020.
+\bibitem{d}Serra, J., Pubill, D., Antonopoulos, A  and Verikoukis, C. “Smart HVAC constraints”, \emph{The Scientific World Journal}, 2014, pp 1-11.
+\bibitem{d}Fong, K. F., Hanby, V. I., and Chow, T. T. “HVAC system optimization
+for energy management by evolutionary programming,” Energy and
+Buildings, 38(3), 2006, 220-231.
+\bibitem{d}Tacklim Lee, Seonki Jeon, Dongjun Kang, Lee Won Park and Sehyun
+Park, “Design and implementation of intelligent HVAC system based on
+IoT and Bigdata platform,” \emph{IEEE International Conference on
+Consumer Electronics (ICCE)}, Las Vegas, NV, 2017, pp. 398-399.
+\bibitem{d}Y. T. Lee, W. H. Hsiao, C. M. Huang and S. C. T. Chou, “An integrated
+cloud-based smart home management system with community
+hierarchy,” \emph{IEEE Trans. Consumer Electron}, vol. 62, no. 1, pp. 1-9, Feb.
+2016.
+\bibitem{d}E. Rodriguez-Diaz, J. C. Vasquez and J. M. Guerrero, “Intelligent DC
+Homes in Future Sustainable Energy Systems: When efficiency and
+intelligence work together,” \emph{IEEE Consumer Electron. Magazine}, vol. 5,
+no. 1, pp. 74-80, Jan. 2016.
+\bibitem{d}D. S. Kim, S. Y. Son and J. Lee, “Developments of the in-home display
+systems for residential energy monitoring,” \emph{IEEE Trans. Consumer
+Electron}, vol. 59, no. 3, pp. 492-498, August 2013.
+\bibitem{d}Y. S. Son, T. Pulkkinen, K. D. Moon and C. Kim, “Home energy
+management system based on power line communication,” \emph{IEEE Trans.
+Consumer Electron}, vol. 56, no. 3, pp. 1380-1386, Aug. 2010.
+\bibitem{d}N. Kushiro, S. Suzuki, M. Nakata, H. Takahara and M. Inoue,
+“Integrated residential gateway controller for home energy management
+system,” in\emph{ IEEE Transactions on Consumer Electronics}, vol. 49, no. 3,
+pp. 629-636, Aug. 2003.
+\bibitem{d}M. Erol-Kantarci and H. T. Mouftah, “Wireless Sensor Networks for
+Cost-Efficient Residential Energy Management in the Smart Grid,” in\emph{
+IEEE Transactions on Smart Grid}, vol. 2, no. 2, pp. 314-325, June 2011.
+\bibitem{d}T. Fiedler and P. M. Mircea, “Energy management systems according to
+the ISO 50001 standard — Challenges and benefits,” \emph{ International
+Conference on Applied and Theoretical Electricity (ICATE)}, Craiova,
+2012, pp. 1-4.
+\bibitem{d}K. Dittawit and F. A. Aagesen, “Home energy management system for
+electricity cost savings and comfort preservation,” \emph{IEEE Fourth
+International Conference on Consumer Electronics Berlin (ICCEBerlin),}
+Berlin, 2014, pp. 309-313.
 
-\bibitem{d} J. Altarriba, ‘‘Emotion, memory, and bilingualism,’’ in \emph{Foundations of Bilingual Memory, }J. Altarriba and R. Heredia, Eds. New York, NY, USA: Springer, 2014, pp. 185–203.
-\bibitem{d} A. Pavlenko, ‘‘Affective processing in bilingual speakers: Disembodied cognition?’’ \emph{ “Int. J. Psychol., }vol. 47, no. 6, pp. 405–428, 2012.
-\bibitem{d} G. L. Clore and A. Ortony, ‘‘The semantics of the affective lexicon,’’ in \emph{Cognitive Perspectives on Emotion and Motivation. }New York, NY, USA: Springer, 1988, pp. 367–397.
-\bibitem{d} E. H. Hovy, ‘‘What are sentiment, affect, and emotion? Applying the methodology of Michael Zock to sentiment analysis,’’ in \emph{Language Production, Cognition, and the Lexicon, }N. Gala, R. Rapp, and G. Bel-Enguix, Eds. Cham, Switzerland: Springer, 2015, pp. 13–24.
-\bibitem{d} A.PavlenkoandV.Driagina,‘‘RussianemotionvocabularyinAmerican learners’ narratives,’’ \emph{Modern Lang. J., }vol. 91, no. 2, pp. 213–234, 2007.
-\bibitem{d} C.-C. Huang and L.-W. Ku, ‘‘Interest analysis using semantic PageRank and social interaction content,’’ in \emph{Proc. IEEE 13th Int. Conf. Data Mining Workshops, }Dec. 2013, pp. 929–936.
-\bibitem{d} P.-Y.Lu,Y.-Y.Chang,andS.-K.Hsieh,‘‘Causingemotionincollocation: An exploratory data analysis,’’ in \emph{Proc. 25th Conf. Comput. Linguistics Speech Process.,} 2013, pp. 236–249.
-\bibitem{d} B.Pang,L.Lee,andS.Vaithyanathan,‘‘Thumbsup?:Sentiment classification using machine learning techniques,’’ in \emph{Proc. ACL Conf. Empirical Methods Natural Lang. Process.,} 2002, pp. 79–86.
-\bibitem{d} J.-M. Dewaele, ‘‘Investigating the psychological and emotional dimensions in instructed language learning: Obstacles and possibilities,’’ \emph{Modern Lang. J.,} vol. 89, no. 3, pp. 367–380, 2005.
-\bibitem{d} J.-M.Dewaele and A.Pavlenko,‘‘Emotionvocabularyininterlanguage,’’ \emph{Lang. Learn.,} vol. 52, no. 2, pp. 263–322, 2002.
-\bibitem{d} T.Kaneko,‘‘Hownon-nativespeakersexpressanger,surprise,anxiety and grief: A corpus-based comparative study,’’ in \emph{Proc. Corpus Linguistics Conf.,} 2003, pp. 384–393.
-\bibitem{d} E. M. Rintell, ‘‘That’s incredible: Stories of emotion told by second language learners and native speakers,’’ \emph{Developing Communicative Competence in a Second Language.} 1990, pp. 75–94.
-\bibitem{d} J.-M. Dewaele, ‘‘On emotions in foreign language learning and use,’’ \emph{Lang. Teacher,} vol. 39, no. 3, pp. 13–15, 2015.
-\bibitem{d} C. R. Graham, A. W. Hamblin, and S. Feldstein, ‘‘Recognition of emotion in English voices by speakers of Japanese, Spanish and English,’’ \emph{Int. Rev. Appl. Linguistics Lang. Teach.,} vol. 39, no. 1, pp. 19–37, 2001.
-\bibitem{d} Y. Yeh, H.-C. Liou, and Y.-H. Li, ‘‘Online synonym materials and concor- dancing for EFL college writing,’’ \emph{Comput. Assist. Lang. Learn.,} vol. 20, no. 2, pp. 131–152, 2007.
-\bibitem{d} M. Martin, ‘‘Advanced vocabulary teaching: The problem of synonyms,’’ \emph{Modern Lang. J.,} vol. 68, no. 2, pp. 130–137, 1984.
-\bibitem{d} D. Liu, ‘‘Salience and construal in the use of synonymy: A study of two sets of near-synonymous nouns,’’ \emph{Cognit. Linguistics,} vol. 24, no. 1, pp. 67–113, 2013.
-\bibitem{d} D. Liu and S. Zhong, ‘‘L2 vs. L1 use of synonymy: An empirical study of synonym use/acquisition,’’ \emph{Appl. Linguistics,} vol. 37, no. 2, pp. 239–261, Apr. 2016.
-\bibitem{d} W.-F. Chen, M.-H. Chen, and L.-W. Ku, ‘‘Embarrassed or awkward? Ranking emotion synonyms for ESL learners’ appropriate wording,’’ in \emph{Proc. 10th Workshop Innov. NLP Building Educ. Appl.,} 2015, pp. 144–153.
-\bibitem{d} W.-F. Chen, M.-H. Chen, M.-L. Chen, and L.-W. Ku, ‘‘A computer- assistance learning system for emotional wording,’’ \emph{IEEE Trans. Knowl. Data Eng.,} vol. 28, no. 5, pp. 1093–1104, May 2016.
 \end{thebibliography}
 \end{document}
