@@ -56,7 +56,7 @@ by
 \vspace{5mm}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{ceclogo.png}
+\includegraphics[width=4cm]{ceclogo.png}
 \end{figure}
 \textbf{November 2019}
 \vspace{8mm}
@@ -79,7 +79,7 @@ Phone: (0479) 2454125, 2451424; Fax: (0479) 2451424
 \\
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{ceclogo.png}
+\includegraphics[width=4cm]{ceclogo.png}
 \end{figure}
 \setlength{\baselineskip}{1.5\baselineskip}
 \textbf{Department of Computer Engineering}
@@ -97,18 +97,21 @@ Submitted by
 \\
 is a bonafide record of the work done by him.
 \end{center}
-\vspace{30ex}
-%\textbf{Mrs.Sheeba}
-\hspace{55ex}
-%\textbf{Dr. Smitha Dharan}
+\vspace{20ex}
+\hspace{5ex}
+% \textbf{Mrs.Shiny B}
+\hspace{15ex}
+% \textbf{Mrs.Shiny B}
+\hspace{16ex}
+% \textbf{Dr. Smitha Dharan}
 \\
-
-\hspace{0ex}
+\vspace{0ex}
+\hspace{4ex}
 \textbf{Co-ordinator}
-\hspace{18ex}
+\hspace{20ex}
 \textbf{Guide}
-\hspace{18ex}
-\textbf{Head of the Department}
+\hspace{16ex}
+\textbf{Head of the Department} 
 \newpage
 \pagenumbering{roman}
 \renewcommand{\headrulewidth}{0.0pt}
@@ -163,12 +166,11 @@ consumption and to meet consumer demand.
 \setlength{\baselineskip}{1.0\baselineskip}
 
 % Table of content Page
+\setlength{\baselineskip}{1.0\baselineskip}
 \newpage
 \begin{center}
 \tableofcontents
 \end{center}
-
-
 
 % List of Figures Page
 \newpage
@@ -176,6 +178,20 @@ consumption and to meet consumer demand.
 \begin{center}
 \listoffigures
 \end{center}
+
+% List of Tables Page
+\newpage
+\thispagestyle{plain}
+\begin{center}
+\listoftables
+\end{center}
+
+% % List of Figures Page
+% \newpage
+% \thispagestyle{plain}
+% \begin{center}
+% \listoffigures
+% \end{center}
 
 
 
@@ -398,7 +414,7 @@ system’s hardware and software architecture are as follows:
 \includegraphics[height=5cm,width=10cm]{figure1.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Figure 1.} Systerm Architecture}
+\caption[Systerm Architecture]{\textbf{Figure 1.} Systerm Architecture}
 \end{figure}
 
 \subsection{Hardware Architecture}
@@ -424,12 +440,12 @@ scalable Storage Server, Analytics Engine server, and a Web
 server. The functionality of each server developed and utilized
 will be explained in the software architecture section.
 
-\begin{figure}[H]
+\begin{table}[H]
 \includegraphics{Table1.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Table I.} Micro-Controller Specifications}
-\end{figure}
+\caption[Micro-Controller Specifications]{\textbf{Table I.} Micro-Controller Specifications}
+\end{table}
 
 \subsection{Software Architecture}
 Software architecture consists of three primary building
@@ -504,7 +520,7 @@ remote access control by the end user.
 \includegraphics{figure2.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Figure 2.} Sequence Diagram}
+\caption[Sequence Diagram]{\textbf{Figure 2.} Sequence Diagram}
 \end{figure}
 
 \newpage
@@ -538,12 +554,12 @@ is programmed to collect the temperature, humidity and power
 consumption data from the sensors.
 
 
-\begin{figure}[H]
+\begin{table}[H]
 \includegraphics[width=15cm]{Table2.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Table II.} Data Frame-Payload}
-\end{figure}
+\caption[Data Frame-Payload]{\textbf{Table II.} Data Frame-Payload}
+\end{table}
 
 \paragraph{}
 The data is framed in to a lightweight format[28] compatible with MQTT server. This
@@ -560,7 +576,7 @@ proposed system.
 \includegraphics[height=8cm,width=16cm]{Figure3.png}
 %\counterwithin{figure}{section}
 \centering
-\caption{\textbf{Figure 3.} Hardware Components}
+\caption[Hardware Components]{\textbf{Figure 3.} Hardware Components}
 \end{figure}
 
 \subsection{Software}
@@ -598,7 +614,7 @@ description of these software modules is given as follows:
         \includegraphics{Figure4.png}
         %\counterwithin{figure}{section}
         \centering
-        \caption{\textbf{Figure 4.} Home Owner Graph}
+        \caption[Home Owner Graph]{\textbf{Figure 4.} Home Owner Graph}
         \end{figure}
     \newpage
     For \textbf{community stakeholders}, they are entitled to
@@ -618,7 +634,7 @@ description of these software modules is given as follows:
         \includegraphics{Figure5.png}
         %\counterwithin{figure}{section}
         \centering
-        \caption{\textbf{Figure 5.} Community Owner Graph}
+        \caption[Community Owner Graph]{\textbf{Figure 5.} Community Owner Graph}
         \end{figure}
     \newpage
     The \textbf{state stakeholders} at a state utility center can view data set distribution across
@@ -636,7 +652,7 @@ description of these software modules is given as follows:
         \includegraphics{Figure6.png}
         %\counterwithin{figure}{section}
         \centering
-        \caption{\textbf{Figure 6.} State Owner Graph}
+        \caption[State Owner Graph]{\textbf{Figure 6.} State Owner Graph}
         \end{figure}
     \newpage
 \item \textbf{Client Application}
@@ -655,7 +671,7 @@ description of these software modules is given as follows:
         \includegraphics{Figure7.png}
         %\counterwithin{figure}{section}
         \centering
-        \caption{\textbf{Figure 7.} (a) Remote control of devices \hspace{2ex} (b) Monthly Bill Management}
+        \caption[Remote control of devices and Monthly Bill Management]{\textbf{Figure 7.} (a) Remote control of devices \hspace{16ex} (b) Monthly Bill Management}
         \end{figure}
 \end{itemize}
 
@@ -682,12 +698,12 @@ indicating that the system was able to accept 1000 concurrent
 MQTT clients publishing messages to a subscribed topic of
 the MQTT server. 
 \newline
-    \begin{figure}[H]
+    \begin{table}[H]
     \includegraphics{Table3.png}
     %\counterwithin{figure}{section}
     \centering
-    \caption{\textbf{Table III.} MQTT Test Cases and Results}
-    \end{figure}
+    \caption[MQTT Test Cases and Results]{\textbf{Table III.} MQTT Test Cases and Results}
+    \end{table}
 \newpage
 From the results as shown in Table III, it is
 evident that the overall latency for QoS-0 is always lower than
@@ -704,7 +720,7 @@ acknowledgement and persistent session (Fig. 8).
     \includegraphics{Figure8.png}
     %\counterwithin{figure}{section}
     \centering
-    \caption{\textbf{Figure 8.} Throughput (kbps) Vs. Number of clients’ graph}
+    \caption[Throughput (kbps) Vs. Number of clients’ graph]{\textbf{Figure 8.} Throughput (kbps) Vs. Number of clients’ graph}
     \end{figure}
 
 \newpage
@@ -724,7 +740,7 @@ the background.
     \includegraphics{Figure9.png}
     %\counterwithin{figure}{section}
     \centering
-    \caption{\textbf{Figure 9.} Server performance during request phase}
+    \caption[Server performance during request phase]{\textbf{Figure 9.} Server performance during request phase}
     \end{figure}
 
 \newpage
@@ -741,12 +757,12 @@ server during peak time. 4000 files, each 62 Bytes in size,
 were extracted from the storage server for read operation. A
 summary of the response time to complete read and write
 operation by the storage server is shown in Table IV.
-    \begin{figure}[H]
+    \begin{table}[H]
     \includegraphics{Table4.png}
     %\counterwithin{figure}{section}
     \centering
-    \caption{\textbf{Table IV.} Storage Server Performance}
-    \end{figure}
+    \caption[Storage Server Performance]{\textbf{Table IV.} Storage Server Performance}
+    \end{table}
 
 \newpage
 \section{CONCLUSION}
@@ -757,7 +773,7 @@ system design uses data analytics and scalable storage for
 building a smart EMS to aid different stakeholders with their
 respective privileges. The system empowers users to remotely
 monitor and control devices, and online bill generation via a
-friendly user interface mobile application
+friendly user interface mobile application.
 
 \newpage
 % \cleardoublepage
@@ -768,31 +784,35 @@ friendly user interface mobile application
 \begin{thebibliography}{9}
 
 \bibitem{d}"A.R. Al-Ali, I.A. Zualkernan, M. Rashid, R. Gupta, M. Alikarar, "A smart home energy management system using IoT and big data analytics approach",\emph{IEEE Transactions on Consumer Electronics}, vol. 63, no. 4, pp. 426-434, 2017"
-\bibitem{d}“Design and implementation of building energy monitoring and
-management system based on wireless sensor networks,” \emph{Tenth International Conference on Computer Engineering \& Systems (ICCES)},
-Cairo, 2015, pp. 230-233
+\bibitem{d}“Welcome to Apache™ Hadoop®!” Hadoop.apache.org, 2016.
+\bibitem{d}“Pentaho Community,” Community.pentaho.com, 2016.
+\bibitem{d}M. Abo-Zahhad, S. M. Ahmed, M. Farrag, M. F. A. Ahmed and A. Ali,
+“Design and implementation of building energy monitoring and
+management system based on wireless sensor networks,”\emph{Tenth
+International Conference on Computer Engineering \& Systems (ICCES)},
+Cairo, 2015, pp. 230-233.
 \bibitem{d}N. H. Nguyen, Q. T. Tran, J. M. Leger and T. P. Vuong, “A real-time
 control using wireless sensor network for intelligent energy management
-system in buildings,” \emph{ 2010 IEEE Workshop on Environmental Energy
-and Structural Monitoring Systems, Taranto}, 2010, pp. 87-92.
-\bibitem{d}J. Byun, I. Hong, B. Kang and S. Park, “Implementation of an Adaptive
-Intelligent Home Energy Management System Using a Wireless Ad-Hoc
+system in buildings,” \emph{IEEE Workshop on Environmental Energy
+and Structural Monitoring Systems}, Taranto, 2010, pp. 87-92.
+\bibitem{d}Intelligent Home Energy Management System Using a Wireless Ad-Hoc
 and Sensor Network in Pervasive Environments,” \emph{Proceedings of
 20th International Conference on Computer Communications and
 Networks (ICCCN)}, Maui, HI, 2011, pp. 1-6.
 \bibitem{d}J. Han, C. s. Choi, W. k. Park, I. Lee and S. h. Kim, “Smart home energy
 management system including renewable energy based on ZigBee and PLC,”
 \emph{IEEE Trans. Consumer Electron}, vol. 60, no. 2, pp. 198-202, May 2014.
-\bibitem{d}J. Wang, J. Huang, W. Chen, J. Liu and D. Xu, “Design of IoT-based
-energy efficiency management system for building ceramics production
-line,” \emph{ IEEE 11th Conference on Industrial Electronics and
-Applications (ICIEA)}, Hefei, 2016, pp. 912-917
+\bibitem{d}energy efficiency management system for building ceramics production
+line,” \emph{IEEE 11th Conference on Industrial Electronics and
+Applications (ICIEA)}, Hefei, 2016, pp. 912-917.
 \bibitem{d}G. Mingming, S. Liangshan, H. Xiaowei and S. Qingwei, “The System
-of Wireless Smart House Based on GSM and ZigBee,” \emph{
+of Wireless Smart House Based on GSM and ZigBee,”\emph{
 International Conference on Intelligent Computation Technology and
 Automation}, Changsha, 2010, pp. 1017-1020.
-\bibitem{d}Serra, J., Pubill, D., Antonopoulos, A  and Verikoukis, C. “Smart HVAC constraints”, \emph{The Scientific World Journal}, 2014, pp 1-11.
-\bibitem{d}Fong, K. F., Hanby, V. I., and Chow, T. T. “HVAC system optimization
+\bibitem{d}Serra, J., Pubill, D., Antonopoulos, A., \& Verikoukis, C. “Smart HVAC
+control in IoT: Energy consumption minimization with user comfort
+constraints”, The Scientific World Journal, 2014, pp 1-11.s
+\bibitem{d}Fong, K. F., Hanby, V. I., \& Chow, T. T. “HVAC system optimization
 for energy management by evolutionary programming,” Energy and
 Buildings, 38(3), 2006, 220-231.
 \bibitem{d}Tacklim Lee, Seonki Jeon, Dongjun Kang, Lee Won Park and Sehyun
@@ -801,11 +821,11 @@ IoT and Bigdata platform,” \emph{IEEE International Conference on
 Consumer Electronics (ICCE)}, Las Vegas, NV, 2017, pp. 398-399.
 \bibitem{d}Y. T. Lee, W. H. Hsiao, C. M. Huang and S. C. T. Chou, “An integrated
 cloud-based smart home management system with community
-hierarchy,” \emph{IEEE Trans. Consumer Electron}, vol. 62, no. 1, pp. 1-9, Feb.
+hierarchy,”\emph{ IEEE Trans. Consumer Electron}, vol. 62, no. 1, pp. 1-9, Feb.
 2016.
 \bibitem{d}E. Rodriguez-Diaz, J. C. Vasquez and J. M. Guerrero, “Intelligent DC
 Homes in Future Sustainable Energy Systems: When efficiency and
-intelligence work together,” \emph{IEEE Consumer Electron. Magazine}, vol. 5,
+intelligence work together,”\emph{ IEEE Consumer Electron. Magazine}, vol. 5,
 no. 1, pp. 74-80, Jan. 2016.
 \bibitem{d}D. S. Kim, S. Y. Son and J. Lee, “Developments of the in-home display
 systems for residential energy monitoring,” \emph{IEEE Trans. Consumer
@@ -813,21 +833,30 @@ Electron}, vol. 59, no. 3, pp. 492-498, August 2013.
 \bibitem{d}Y. S. Son, T. Pulkkinen, K. D. Moon and C. Kim, “Home energy
 management system based on power line communication,” \emph{IEEE Trans.
 Consumer Electron}, vol. 56, no. 3, pp. 1380-1386, Aug. 2010.
-\bibitem{d}N. Kushiro, S. Suzuki, M. Nakata, H. Takahara and M. Inoue,
-“Integrated residential gateway controller for home energy management
-system,” in\emph{ IEEE Transactions on Consumer Electronics}, vol. 49, no. 3,
+\bibitem{d}“Integrated residential gateway controller for home energy management
+system,” in \emph{IEEE Transactions on Consumer Electronics}, vol. 49, no. 3,
 pp. 629-636, Aug. 2003.
 \bibitem{d}M. Erol-Kantarci and H. T. Mouftah, “Wireless Sensor Networks for
-Cost-Efficient Residential Energy Management in the Smart Grid,” in\emph{
-IEEE Transactions on Smart Grid}, vol. 2, no. 2, pp. 314-325, June 2011.
+Cost-Efficient Residential Energy Management in the Smart Grid,” in
+\emph{IEEE Transactions on Smart Grid}, vol. 2, no. 2, pp. 314-325, June 2011.
 \bibitem{d}T. Fiedler and P. M. Mircea, “Energy management systems according to
 the ISO 50001 standard — Challenges and benefits,” \emph{ International
 Conference on Applied and Theoretical Electricity (ICATE)}, Craiova,
 2012, pp. 1-4.
 \bibitem{d}K. Dittawit and F. A. Aagesen, “Home energy management system for
-electricity cost savings and comfort preservation,” \emph{IEEE Fourth
-International Conference on Consumer Electronics Berlin (ICCEBerlin),}
-Berlin, 2014, pp. 309-313.
+electricity cost savings and comfort preservation,” \emph{ IEEE Fourth
+International Conference on Consumer Electronics Berlin (ICCEBerlin)},
+Berlin, 2014, pp. 309-313
+\bibitem{d}A. Industries, “DHT11 basic temperature-humidity sensor + extras ID:
+386 - \$5.00 : Adafruit Industries, Unique \& fun DIY electronics and
+kits”, Adafruit.com, 2016.
+\bibitem{d}“Particle,” Docs.particle.io, 2016.
+\bibitem{d}“An Open Source MQTT v3.1 Broker,” Mosquitto.org, 2016.
+\bibitem{d}“Apache HBase – Apache HBase™ Home,” Hbase.apache.org, 2016
+\bibitem{d}N. Foundation, “Node.js,” Nodejs.org, 2016.
+\bibitem{d}“Apache Cordova,” Cordova.apache.org, 2016.
+\bibitem{d}“RFID Card Reader - Serial | 28140 | Parallax Inc.,” Parallax.com, 2016.
+\bibitem{d}“JSON,” Json.org, 2016.
 
 \end{thebibliography}
 \end{document}
